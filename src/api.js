@@ -25,6 +25,7 @@ export const moviesApi = {
       }
     })
 };
+console.log(moviesApi);
 
 export const tvApi = {
   topRated: () => api.get("tv/top_rated"),
