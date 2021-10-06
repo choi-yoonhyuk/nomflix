@@ -54,10 +54,11 @@ const Title = styled.h3`
 `;
 
 const ItemContainer = styled.div`
-  margin: 20px 0;
+  margin: 30px 0;
+  
 `;
 
-const Item = styled.span``;
+const Item = styled.span``
 
 const Divider = styled.span`
   margin: 0 10px;
@@ -104,16 +105,17 @@ const DetailPresenter = ({ result, loading, error }) =>
               : result.original_name}
           </Title>
           <ItemContainer>
+          <Divider>▫️</Divider>
             <Item>
               {result.release_date
                 ? result.release_date.substring(0, 4)
                 : result.first_air_date.substring(0, 4)}
             </Item>
-            <Divider>•</Divider>
+            <Divider>▫️</Divider>
             <Item>
               {result.runtime ? result.runtime : result.episode_run_time[0]} min
             </Item>
-            <Divider>•</Divider>
+            <Divider>▫️</Divider>
             <Item>
               {result.genres &&
                 result.genres.map((genre, index) =>
@@ -122,6 +124,8 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name} / `
                 )}
             </Item>
+            <Divider>▫️</Divider>
+            <Item>{result.production_companies[0].name}</Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
