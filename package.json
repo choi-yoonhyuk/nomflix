@@ -35,7 +35,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://choi-yoonhyuk.github.io/nomflix",
+  "homepage": "https://tender-poitras-10c4a3.netlify.app",
   "browserslist": {
     "production": [
       ">0.2%",
